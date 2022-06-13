@@ -31,6 +31,34 @@ CREATE TABLE movies (
 go run server.go
 ```
 
+### Request
+```graphql
+query getMovies {
+  movies {
+    title
+    url
+  }
+}
+```
+
+### Response
+```json
+{
+  "data": {
+    "movies": [
+      {
+        "title": "Rise of GraphQL Warrior Pt1",
+        "url": "https://riseofgraphqlwarriorpt1.com/"
+      },
+      {
+        "title": "Iron Man",
+        "url": "https://ironman.com"
+      }
+    ]
+  }
+}
+```
+
 Client starts at: localhost:38080
 
 ## Development
